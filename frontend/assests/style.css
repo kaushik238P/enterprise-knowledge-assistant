@@ -1,0 +1,11 @@
+/* frontend/assets/style.css */
+
+/* Simple, clean styling modifications */
+.reportview-container {
+    background-color: #fafafa;
+}
+
+h1, h2, h3 {
+    color: #151d2b;
+    font-weight: 600;
+}
