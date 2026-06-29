@@ -1,32 +1,44 @@
+# Git
 .git
 .gitignore
 
-.venv
-venv
-__pycache__
-*.pyc
+# Python
+.venv/
+__pycache__/
+*.py[cod]
 *.pyo
 *.pyd
+.python-version
 
-.pytest_cache
-.mypy_cache
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
 
-.streamlit
+# IDE
+.vscode/
+.idea/
 
-storage
-docs
-
-logs
-
-.vscode
-.idea
-
+# Environment
 .env
 
-README.md
+# Logs
+logs/
+*.log
 
-*.db
-*.sqlite
+# Local storage
+storage/
+qdrant_storage/
 
-dist
-build
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp

@@ -50,8 +50,20 @@ class Settings(BaseSettings):
     # ------------------------------------------------------------------
     # Qdrant
     # ------------------------------------------------------------------
+
+    # Local development:
+    #   http://localhost:6333
+    #
+    # Docker:
+    #   http://qdrant:6333
+
+    qdrant_url: str = "http://localhost:6333"
+
+    # Optional for Qdrant Cloud
+    qdrant_api_key: str | None = None
+
     qdrant_collection_name: str = "eka_documents"
-    qdrant_path: str = str((PROJECT_ROOT / "storage" / "qdrant").resolve())
+
     embedding_dimension: int = 384
 
     # ------------------------------------------------------------------

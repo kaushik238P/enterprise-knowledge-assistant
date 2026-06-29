@@ -38,7 +38,10 @@ class QdrantVectorStore:
         if settings.embedding_dimension <= 0:
             raise ValueError("settings.embedding_dimension must be a positive integer.")
         self._collection_name = collection_name
-        self._client = QdrantClient(path=settings.qdrant_path)
+        self._client = QdrantClient(
+            url=settings.qdrant_url,
+            api_key=settings.qdrant_api_key,
+            )
 
     def collection_exists(self) -> bool:
         try:
